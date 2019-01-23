@@ -26,7 +26,7 @@ static_clone = os.path.join(settings.BASE_DIR, '.fend\static')
 templates_clone = os.path.join(settings.BASE_DIR, '.fend\\templates')
 
 # REQUEST CALL TO TEMPLATE OPTIONS SERVER
-response = requests.get("http://52.90.93.100/templates.txt")
+response = requests.get("https://s3.amazonaws.com/dangofend/templates.txt")
 template_options = response.text
 ##@@ arrparser@@@###
 parser = argparse.ArgumentParser(description='Choose your template')
