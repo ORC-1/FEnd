@@ -14,7 +14,9 @@ from django.conf import settings
 from urllib.request import urlopen
 
 # GLOBAL SETTINGS
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_fend.settings')
+cwd = os.getcwd()
+path_setting = str((os.path.basename(cwd)))
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', path_setting+'.settings')
 Base_temp = os.path.join(settings.BASE_DIR, '.fend')
 BASE_URL = "https://s3.amazonaws.com/dangofend/"
 
@@ -29,7 +31,7 @@ template_options = response.text
 ##@@ arrparser@@@###
 parser = argparse.ArgumentParser(description='Choose your template')
 parser.add_argument('template_name', type=str,
-                    help='Type in the name of the template you would like to use, Options are:  {}'.format(
+                    help='Type in the name of the template you would like to use, currently available Options are:  {}'.format(
                         template_options))
 args = parser.parse_args()
 
