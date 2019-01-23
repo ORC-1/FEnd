@@ -5,9 +5,9 @@ Dango_FEnd is a simple script for generating front end codes that can be easily 
 
 *Easy to use and Works with no external dependecies.
 
-To use, simply 
-1.clone this repository to your parent django project folder
-2.issue python fend.py <desired template name> 
+To use, simply <br />
+1.clone this repository to your parent django project folder <br />
+2.issue python fend.py (desired template name)  <br />
 E.g:
 python fend.py login
 ![Screenshot](blur_instruction.PNG)
