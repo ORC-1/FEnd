@@ -9,7 +9,8 @@ To use, simply <br />
 1. clone this repository to your parent django project folder <br />
 2. issue python fend.py (desired template name)
 E.g:
-python fend.py login
+python fend.py login <br />
+to view a list of avalaible themes, use python fend.py -h
 ![Screenshot](blur_instruction.PNG)
 
 
