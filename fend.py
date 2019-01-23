@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+__author__ = "Rolandazim@gmail.com"
+
 import os
 import sys
 import errno
