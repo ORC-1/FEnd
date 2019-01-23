@@ -47,7 +47,8 @@ try:
         # For windows set file attribute.
         print("Creating Template folder............................")
         if os.path.exists(Base_temp):
-            print(Base_temp + " already exists, please delete or rename .fend folder")
+            print(Base_temp + " already exists, deleting .fend folder")
+            shutil.rmtree(Base_temp)
 
         if not os.path.exists(Base_temp):
             os.makedirs(Base_temp)
@@ -84,7 +85,7 @@ def find(name, path):
                     if not os.path.isdir(os.path.join(dir, obj)):
                         path_off = str((os.path.basename(dir)))
                         path_off1 = str(settings.ROOT_URLCONF.split(".")[0])
-                        if path_off == ".fend" or path_off == path_off1:
+                        if path_off == ".fend" or path_off ==".git" or path_off == path_off1:
                             pass
 
                         else:
@@ -116,7 +117,7 @@ def staticCopy(src, dst, symlinks=False, ignore=None):
             path_off = str((os.path.basename(obj)))
             path_off1 = str(settings.ROOT_URLCONF.split(".")[0])
 
-            if path_off == ".fend" or path_off == path_off1:
+            if path_off == ".fend" or path_off ==".git" or path_off == path_off1:
                 pass
             elif not len(os.listdir(target)) == 0:
                 print("Static Files found in {}".format(path_off))
@@ -148,7 +149,7 @@ def templatesCopy(src, dst):
             path_off = str((os.path.basename(obj)))
             path_off1 = str(settings.ROOT_URLCONF.split(".")[0])
 
-            if path_off == ".fend" or path_off == path_off1:
+            if path_off == ".fend" or path_off ==".git" or path_off == path_off1:
                 pass
             elif not len(os.listdir(target)) == 0:
                 print("Template Files found in {}".format(path_off))
