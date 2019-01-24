@@ -3,7 +3,7 @@ Simple script for adding Django ready template to projects
 
 Dango_FEnd is a simple script for generating front end codes that can be easily used in Django project.
 
-*Easy to use and Works with no external dependecies.
+*Easy to use and Works with no external dependency.
 
 To use, simply <br />
 1. clone this repository to your parent django project folder <br />
